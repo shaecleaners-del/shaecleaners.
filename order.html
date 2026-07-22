@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking Layanan | Shae Cleaners</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<link rel="stylesheet" href="../order.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="order-header">
+
+<a href="../index.html" class="back-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<div>
+
+<h2>Booking Layanan</h2>
+
+<p>Shae Cleaners</p>
+
+</div>
+
+</header>
+
+<!-- PROGRESS -->
+
+<section class="progress-box">
+
+<div class="progress-step active">
+
+<div class="circle">1</div>
+
+<span>Data</span>
+
+</div>
+
+<div class="line"></div>
+
+<div class="progress-step">
+
+<div class="circle">2</div>
+
+<span>Pembayaran</span>
+
+</div>
+
+<div class="line"></div>
+
+<div class="progress-step">
+
+<div class="circle">3</div>
+
+<span>Selesai</span>
+
+</div>
+
+</section>
+
+<!-- DATA PELANGGAN -->
+
+<section class="card-form">
+
+<h3>
+
+<i class="fa-solid fa-user"></i>
+
+Data Pelanggan
+
+</h3>
+
+<div class="form-group">
+
+<label>Nama Lengkap</label>
+
+<input
+type="text"
+id="nama"
+placeholder="Masukkan nama lengkap">
+
+</div>
+
+<div class="form-group">
+
+<label>No WhatsApp</label>
+
+<input
+type="tel"
+id="wa"
+placeholder="08xxxxxxxxxx">
+
+</div>
+
+<div class="form-group">
+
+<label>Alamat Lengkap</label>
+
+<textarea
+id="alamat"
+rows="3"
+placeholder="Masukkan alamat lengkap"></textarea>
+
+</div>
+
+<div class="form-group">
+
+<label>Link Google Maps (Opsional)</label>
+
+<input
+type="url"
+id="maps"
+placeholder="https://maps.google.com/...">
+
+</div>
+
+</section>
+
+<!-- PILIH LAYANAN -->
+
+<section class="card-form">
+
+<h3>
+
+<i class="fa-solid fa-soap"></i>
+
+Pilih Layanan
+
+</h3>
+
+<div class="service-grid">
+
+<label class="service-card">
+
+<input
+type="radio"
+name="layanan"
+value="Home Cleaning">
+
+<img src="../assets/icons/home.png">
+
+<span>Home Cleaning</span>
+
+</label>
+
+<label class="service-card">
+
+<input
+type="radio"
+name="layanan"
+value="Cuci AC">
+
+<img src="../assets/icons/ac.png">
+
+<span>Cuci AC</span>
+
+</label>
+
+<label class="service-card">
+
+<input
+type="radio"
+name="layanan"
+value="Cuci Sofa">
+
+<img src="../assets/icons/sofa.png">
+
+<span>Cuci Sofa</span>
+
+</label>
+
+<label class="service-card">
+
+<input
+type="radio"
+name="layanan"
+value="Cuci Kasur">
+
+<img src="../assets/icons/kasur.png">
+
+<span>Cuci Kasur</span>
+
+</label>
+
+<label class="service-card">
+
+<input
+type="radio"
+name="layanan"
+value="Jok Mobil">
+
+<img src="../assets/icons/mobil.png">
+
+<span>Jok Mobil</span>
+
+</label>
+
+<label class="service-card">
+
+<input
+type="radio"
+name="layanan"
+value="Cuci Kursi">
+
+<img src="../assets/icons/kursi.png">
+
+<span>Cuci Kursi</span>
+
+</label>
+
+<label class="service-card">
+
+<input
+type="radio"
+name="layanan"
+value="Cuci Karpet">
+
+<img src="../assets/icons/karpet.png">
+
+<span>Karpet</span>
+
+</label>
+
+<label class="service-card">
+
+<input
+type="radio"
+name="layanan"
+value="Lainnya">
+
+<img src="../assets/icons/more.png">
+
+<span>Lainnya</span>
+
+</label>
+
+</div>
+
+</section>
+
+<!-- JADWAL -->
+
+<section class="card-form">
+
+<h3>
+
+<i class="fa-solid fa-calendar-days"></i>
+
+Jadwal Booking
+
+</h3>
+
+<div class="form-group">
+
+<label>Tanggal</label>
+
+<input type="date" id="tanggal">
+
+</div>
+
+<div class="form-group">
+
+<label>Jam</label>
+
+<input type="time" id="jam">
+
+</div>
+
+</section>
+<!-- ================= DETAIL PESANAN ================= -->
+
+<section class="card-form">
+
+<h3>
+<i class="fa-solid fa-box"></i>
+Detail Pesanan
+</h3>
+
+<div class="form-group">
+
+<label>Jenis / Ukuran</label>
+
+<select id="jenis">
+
+<option value="">-- Pilih Jenis --</option>
+
+<option value="Sofa 1 Seater">Sofa 1 Seater</option>
+
+<option value="Sofa 2 Seater">Sofa 2 Seater</option>
+
+<option value="Sofa L">Sofa L</option>
+
+<option value="Single Bed">Single Bed</option>
+
+<option value="Queen Bed">Queen Bed</option>
+
+<option value="King Bed">King Bed</option>
+
+<option value="2 Baris">Jok Mobil 2 Baris</option>
+
+<option value="3 Baris">Jok Mobil 3 Baris</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Jumlah</label>
+
+<input
+type="number"
+id="qty"
+min="1"
+value="1">
+
+</div>
+
+<div class="form-group">
+
+<label>Harga Satuan</label>
+
+<input
+type="text"
+id="harga"
+readonly>
+
+</div>
+
+<div class="form-group">
+
+<label>Total Harga</label>
+
+<input
+type="text"
+id="total"
+readonly>
+
+</div>
+
+</section>
+
+<!-- ================= VOUCHER ================= -->
+
+<section class="card-form">
+
+<h3>
+
+<i class="fa-solid fa-ticket"></i>
+
+Voucher Promo
+
+</h3>
+
+<div class="voucher-box">
+
+<input
+
+type="text"
+
+id="voucher"
+
+placeholder="Masukkan kode promo">
+
+<button id="cekVoucher">
+
+Gunakan
+
+</button>
+
+</div>
+
+<p id="voucherInfo"></p>
+
+</section>
+
+<!-- ================= FOTO ================= -->
+
+<section class="card-form">
+
+<h3>
+
+<i class="fa-solid fa-camera"></i>
+
+Upload Foto
+
+</h3>
+
+<input
+
+type="file"
+
+id="foto"
+
+accept="image/*"
+
+capture="environment">
+
+<img id="previewFoto">
+
+</section>
+
+<!-- ================= CATATAN ================= -->
+
+<section class="card-form">
+
+<h3>
+
+<i class="fa-solid fa-note-sticky"></i>
+
+Catatan Tambahan
+
+</h3>
+
+<textarea
+
+id="catatan"
+
+rows="5"
+
+placeholder="Contoh: Noda kopi di bagian kanan sofa, mohon dibersihkan secara maksimal..."></textarea>
+
+</section>
+
+<!-- ================= RINGKASAN ================= -->
+
+<section class="card-form summary">
+
+<h3>
+
+<i class="fa-solid fa-file-invoice"></i>
+
+Ringkasan Pesanan
+
+</h3>
+
+<table>
+
+<tr>
+
+<td>Nama</td>
+
+<td id="sNama">-</td>
+
+</tr>
+
+<tr>
+
+<td>Layanan</td>
+
+<td id="sLayanan">-</td>
+
+</tr>
+
+<tr>
+
+<td>Jenis</td>
+
+<td id="sJenis">-</td>
+
+</tr>
+
+<tr>
+
+<td>Jumlah</td>
+
+<td id="sQty">1</td>
+
+</tr>
+
+<tr>
+
+<td>Tanggal</td>
+
+<td id="sTanggal">-</td>
+
+</tr>
+
+<tr>
+
+<td>Jam</td>
+
+<td id="sJam">-</td>
+
+</tr>
+
+<tr>
+
+<td>Total</td>
+
+<td id="sTotal">
+
+Rp0
+
+</td>
+
+</tr>
+
+</table>
+
+</section>
+<!-- ================= METODE PEMBAYARAN ================= -->
+
+<section class="card-form">
+
+<h3>
+<i class="fa-solid fa-credit-card"></i>
+Metode Pembayaran
+</h3>
+
+<div class="payment-grid">
+
+<label class="payment-card">
+<input type="radio" name="payment" value="QRIS" checked>
+<img src="../assets/payment/qris.png" alt="QRIS">
+<span>QRIS</span>
+</label>
+
+<label class="payment-card">
+<input type="radio" name="payment" value="Transfer BCA">
+<img src="../assets/payment/bca.png" alt="BCA">
+<span>BCA</span>
+</label>
+
+<label class="payment-card">
+<input type="radio" name="payment" value="DANA">
+<img src="../assets/payment/dana.png" alt="DANA">
+<span>DANA</span>
+</label>
+
+<label class="payment-card">
+<input type="radio" name="payment" value="COD">
+<img src="../assets/payment/cod.png" alt="COD">
+<span>Bayar di Tempat</span>
+</label>
+
+</div>
+
+</section>
+
+<!-- ================= ESTIMASI ================= -->
+
+<section class="card-form">
+
+<h3>
+<i class="fa-solid fa-truck-fast"></i>
+Estimasi Kedatangan
+</h3>
+
+<div class="info-box">
+
+<p>
+🚚 Teknisi akan datang sesuai jadwal yang dipilih.
+</p>
+
+<p>
+⏱ Estimasi pengerjaan 1–3 jam tergantung jumlah item.
+</p>
+
+<p>
+🛡 Garansi kepuasan pelanggan.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PERSETUJUAN ================= -->
+
+<section class="card-form">
+
+<label class="checkbox">
+
+<input type="checkbox" id="agree">
+
+<span>
+
+Saya menyetujui syarat dan ketentuan layanan Shae Cleaners.
+
+</span>
+
+</label>
+
+</section>
+
+<!-- ================= TOMBOL AKSI ================= -->
+
+<section class="action-area">
+
+<button id="btnInvoice" class="btn-primary">
+
+<i class="fa-solid fa-file-invoice"></i>
+
+Buat Invoice
+
+</button>
+
+<button id="btnWhatsapp" class="btn-success">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Kirim ke WhatsApp
+
+</button>
+
+<button id="btnPrint" class="btn-secondary">
+
+<i class="fa-solid fa-print"></i>
+
+Cetak Invoice
+
+</button>
+
+</section>
+
+<!-- ================= LOADING ================= -->
+
+<div id="loadingOrder" class="loading-order">
+
+<div class="spinner"></div>
+
+<p>
+
+Memproses pesanan...
+
+</p>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="order-footer">
+
+<img src="../assets/logo/logo.png" alt="Shae Cleaners">
+
+<h3>Shae Cleaners</h3>
+
+<p>
+
+Cleaning Service Profesional
+
+</p>
+
+<p>
+
+© <span id="year"></span> Shae Cleaners
+
+</p>
+
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="../order.js"></script>
+
+<script src="../app.js"></script>
+
+</body>
+
+</html>
