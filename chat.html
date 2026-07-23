@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Live Chat | Shae Cleaners</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="chat.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="chat-header">
+
+<a href="akun.html" class="back-btn">
+<i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<div class="chat-user">
+
+<img src="assets/logo.png" alt="Shae Cleaners">
+
+<div>
+
+<h3>Customer Service</h3>
+
+<span id="adminStatus">
+🟢 Online
+</span>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- AREA CHAT -->
+
+<main class="chat-container">
+
+<div id="chatMessages">
+
+<div class="message admin">
+
+<div class="bubble">
+
+Halo 👋, selamat datang di Shae Cleaners.
+
+Ada yang bisa kami bantu hari ini?
+
+</div>
+
+<span class="time">09:00</span>
+
+</div>
+
+</div>
+
+</main>
+
+<!-- INPUT CHAT -->
+
+<footer class="chat-input">
+
+<label for="imageInput" class="icon-btn">
+
+<i class="fa-solid fa-image"></i>
+
+</label>
+
+<input
+type="file"
+id="imageInput"
+accept="image/*"
+hidden>
+
+<input
+type="text"
+id="messageInput"
+placeholder="Tulis pesan...">
+
+<button id="sendMessage">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+</footer>
+<!-- ================= EMOJI ================= -->
+
+<div class="emoji-panel" id="emojiPanel" style="display:none;">
+
+<button class="emoji">😀</button>
+<button class="emoji">😁</button>
+<button class="emoji">😂</button>
+<button class="emoji">😊</button>
+<button class="emoji">😍</button>
+<button class="emoji">👍</button>
+<button class="emoji">🙏</button>
+<button class="emoji">❤️</button>
+<button class="emoji">🎉</button>
+<button class="emoji">😎</button>
+
+</div>
+
+<!-- ================= TYPING ================= -->
+
+<div id="typingStatus" class="typing-status" style="display:none;">
+
+<i class="fa-solid fa-ellipsis"></i>
+
+Customer Service sedang mengetik...
+
+</div>
+
+<!-- ================= FILE UPLOAD ================= -->
+
+<input
+type="file"
+id="fileInput"
+accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+hidden>
+
+<!-- ================= QUICK ACTION ================= -->
+
+<div class="quick-chat">
+
+<button class="quick-btn" data-message="Halo, saya ingin bertanya mengenai layanan.">
+
+Layanan
+
+</button>
+
+<button class="quick-btn" data-message="Saya ingin mengetahui harga terbaru.">
+
+Harga
+
+</button>
+
+<button class="quick-btn" data-message="Saya ingin menjadwalkan kunjungan teknisi.">
+
+Booking
+
+</button>
+
+<button class="quick-btn" data-message="Saya ingin mengirim bukti pembayaran.">
+
+Pembayaran
+
+</button>
+
+</div>
+
+<!-- ================= OFFLINE ================= -->
+
+<div id="offlineInfo" class="offline-info" style="display:none;">
+
+<i class="fa-solid fa-circle-exclamation"></i>
+
+Customer Service sedang offline.
+Pesan Anda tetap akan diterima dan dibalas pada jam operasional.
+
+</div>
+
+<!-- ================= SCRIPT ================= -->
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="chat.js"></script>
+
+</body>
+</html>

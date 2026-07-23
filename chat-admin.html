@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Live Chat | Shae Cleaners</title>
+
+<link rel="stylesheet" href="admin-chat.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="chat-layout">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="sidebar-header">
+
+<img src="assets/logo.png" alt="Shae Cleaners">
+
+<h2>Shae Cleaners</h2>
+
+<p>Admin Live Chat</p>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchUser"
+placeholder="Cari pelanggan...">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+
+<div id="customerList" class="customer-list">
+
+<!-- Daftar pelanggan akan dimuat dari Firebase -->
+
+</div>
+
+</aside>
+
+<!-- ================= AREA CHAT ================= -->
+
+<main class="chat-area">
+
+<div class="chat-topbar">
+
+<div class="customer-info">
+
+<h3 id="customerName">
+
+Pilih Pelanggan
+
+</h3>
+
+<span id="customerStatus">
+
+Belum ada percakapan dipilih
+
+</span>
+
+</div>
+
+</div>
+
+<div id="adminMessages" class="chat-messages">
+
+<div class="welcome-chat">
+
+<i class="fa-solid fa-comments"></i>
+
+<h3>Live Chat Admin</h3>
+
+<p>
+
+Pilih pelanggan dari daftar di sebelah kiri untuk mulai membalas pesan.
+
+</p>
+
+</div>
+
+</div>
+<!-- ================= INPUT CHAT ================= -->
+
+<footer class="chat-input">
+
+<label for="adminImage" class="icon-btn">
+
+<i class="fa-solid fa-image"></i>
+
+</label>
+
+<input
+type="file"
+id="adminImage"
+accept="image/*"
+hidden>
+
+<label for="adminFile" class="icon-btn">
+
+<i class="fa-solid fa-paperclip"></i>
+
+</label>
+
+<input
+type="file"
+id="adminFile"
+accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png"
+hidden>
+
+<button id="emojiBtn" class="icon-btn">
+
+<i class="fa-regular fa-face-smile"></i>
+
+</button>
+
+<input
+type="text"
+id="adminMessage"
+placeholder="Ketik balasan untuk pelanggan...">
+
+<button id="sendAdminMessage" class="send-btn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+</footer>
+
+<!-- ================= EMOJI PANEL ================= -->
+
+<div id="emojiPanel" class="emoji-panel" style="display:none;">
+
+<button class="emoji">😀</button>
+<button class="emoji">😁</button>
+<button class="emoji">😂</button>
+<button class="emoji">😊</button>
+<button class="emoji">😍</button>
+<button class="emoji">😎</button>
+<button class="emoji">👍</button>
+<button class="emoji">🙏</button>
+<button class="emoji">❤️</button>
+<button class="emoji">🎉</button>
+
+</div>
+
+</main>
+
+</div>
+
+<!-- ================= FIREBASE ================= -->
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="chat-admin.js"></script>
+
+</body>
+</html>

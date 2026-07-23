@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Layanan Favorit | Shae Cleaners</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="favorite.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="favorite-header">
+
+<a href="akun.html" class="back-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<h2>Layanan Favorit</h2>
+
+</header>
+
+<!-- FAVORITE LIST -->
+
+<section class="favorite-container">
+
+<h3>
+
+<i class="fa-solid fa-heart"></i>
+
+Layanan Favorit Saya
+
+</h3>
+
+<div id="favoriteList">
+
+<div class="favorite-card">
+
+<img src="assets/images/cuci-sofa-banner.jpg" alt="Cuci Sofa">
+
+<div class="favorite-info">
+
+<h4>Cuci Sofa</h4>
+
+<p>Sofa bersih, wangi, bebas noda dan debu.</p>
+
+</div>
+
+<div class="favorite-action">
+
+<button class="btn-order">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Order
+
+</button>
+
+<button class="btn-remove">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- REKOMENDASI -->
+
+<section class="favorite-container">
+
+<h3>
+
+<i class="fa-solid fa-star"></i>
+
+Rekomendasi Layanan
+
+</h3>
+
+<div class="recommend-grid">
+
+<a href="cuci-kasur.html" class="recommend-card">
+
+<i class="fa-solid fa-bed"></i>
+
+<span>Cuci Kasur</span>
+
+</a>
+
+<a href="cuci-ac.html" class="recommend-card">
+
+<i class="fa-solid fa-fan"></i>
+
+<span>Cuci AC</span>
+
+</a>
+
+<a href="cuci-karpet.html" class="recommend-card">
+
+<i class="fa-solid fa-rug"></i>
+
+<span>Cuci Karpet</span>
+
+</a>
+
+<a href="home-cleaning.html" class="recommend-card">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Home Cleaning</span>
+
+</a>
+
+</div>
+
+</section>
+<!-- ================= RIWAYAT FAVORIT ================= -->
+
+<section class="favorite-container">
+
+<h3>
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Sering Dipesan
+
+</h3>
+
+<div class="recommend-grid">
+
+<a href="cuci-sofa.html" class="recommend-card">
+
+<i class="fa-solid fa-couch"></i>
+
+<span>Cuci Sofa</span>
+
+</a>
+
+<a href="cuci-jokmobil.html" class="recommend-card">
+
+<i class="fa-solid fa-car-side"></i>
+
+<span>Cuci Jok Mobil</span>
+
+</a>
+
+<a href="cuci-kursi.html" class="recommend-card">
+
+<i class="fa-solid fa-chair"></i>
+
+<span>Cuci Kursi</span>
+
+</a>
+
+<a href="cuci-gorden.html" class="recommend-card">
+
+<i class="fa-solid fa-border-all"></i>
+
+<span>Cuci Gorden</span>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= KOSONG ================= -->
+
+<section id="emptyFavorite" class="favorite-container" style="display:none;">
+
+<div class="empty-state">
+
+<i class="fa-regular fa-heart"></i>
+
+<h3>Belum Ada Favorit</h3>
+
+<p>
+
+Tambahkan layanan favorit agar lebih mudah melakukan pemesanan.
+
+</p>
+
+<a href="index.html" class="btn-order">
+
+Lihat Semua Layanan
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= BOTTOM NAVIGATION ================= -->
+
+<nav class="bottom-nav">
+
+<a href="index.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Beranda</span>
+
+</a>
+
+<a href="promo.html">
+
+<i class="fa-solid fa-tags"></i>
+
+<span>Promo</span>
+
+</a>
+
+<a href="order.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>Order</span>
+
+</a>
+
+<a href="tracking.html">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<span>Tracking</span>
+
+</a>
+
+<a href="akun.html" class="active">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Akun</span>
+
+</a>
+
+</nav>
+
+<script type="module" src="firebase.js"></script>
+<script src="favorite.js"></script>
+
+</body>
+</html>

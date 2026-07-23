@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notifikasi | Shae Cleaners</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="notifikasi.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="notif-header">
+
+<a href="index.html" class="back-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<h2>Notifikasi</h2>
+
+</header>
+
+<!-- FILTER -->
+
+<section class="filter-box">
+
+<button class="filter-btn active" data-filter="all">
+
+Semua
+
+</button>
+
+<button class="filter-btn" data-filter="order">
+
+Order
+
+</button>
+
+<button class="filter-btn" data-filter="promo">
+
+Promo
+
+</button>
+
+<button class="filter-btn" data-filter="info">
+
+Info
+
+</button>
+
+</section>
+
+<!-- DAFTAR NOTIFIKASI -->
+
+<section class="notif-container">
+
+<div id="notifList">
+
+<div class="notif-card unread">
+
+<div class="notif-icon order">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</div>
+
+<div class="notif-content">
+
+<h4>Order Berhasil Dibuat</h4>
+
+<p>
+
+Pesanan Anda berhasil diterima dan sedang menunggu konfirmasi admin.
+
+</p>
+
+<span>Baru saja</span>
+
+</div>
+
+</div>
+
+<div class="notif-card">
+
+<div class="notif-icon promo">
+
+<i class="fa-solid fa-tags"></i>
+
+</div>
+
+<div class="notif-content">
+
+<h4>Promo Spesial Minggu Ini</h4>
+
+<p>
+
+Diskon hingga 30% untuk layanan Home Cleaning dan Cuci Sofa.
+
+</p>
+
+<span>2 jam yang lalu</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= EMPTY STATE ================= -->
+
+<section id="emptyNotif" class="notif-container" style="display:none;">
+
+<div class="empty-state">
+
+<i class="fa-regular fa-bell-slash"></i>
+
+<h3>Belum Ada Notifikasi</h3>
+
+<p>
+
+Semua informasi mengenai order, promo, dan pemberitahuan akan muncul di sini.
+
+</p>
+
+<a href="index.html" class="btn-home">
+
+Kembali ke Beranda
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= AKSI ================= -->
+
+<section class="notif-action">
+
+<button id="readAllBtn" class="action-btn">
+
+<i class="fa-solid fa-check-double"></i>
+
+Tandai Semua Dibaca
+
+</button>
+
+<button id="deleteAllBtn" class="action-btn danger">
+
+<i class="fa-solid fa-trash"></i>
+
+Hapus Semua
+
+</button>
+
+</section>
+
+<!-- ================= BOTTOM NAVIGATION ================= -->
+
+<nav class="bottom-nav">
+
+<a href="index.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Beranda</span>
+
+</a>
+
+<a href="promo.html">
+
+<i class="fa-solid fa-tags"></i>
+
+<span>Promo</span>
+
+</a>
+
+<a href="order.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>Order</span>
+
+</a>
+
+<a href="tracking.html">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<span>Tracking</span>
+
+</a>
+
+<a href="akun.html">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Akun</span>
+
+</a>
+
+</nav>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="notifikasi.js"></script>
+
+</body>
+</html>
