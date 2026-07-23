@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tracking Pesanan | Shae Cleaners</title>
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../tracking.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="tracking-header">
+
+<a href="../index.html" class="back-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<div>
+
+<h2>Lacak Pesanan</h2>
+
+<p>Shae Cleaners</p>
+
+</div>
+
+</header>
+
+<!-- CARD TRACKING -->
+
+<section class="tracking-card">
+
+<h3>
+
+<i class="fa-solid fa-magnifying-glass-location"></i>
+
+Cari Pesanan
+
+</h3>
+
+<div class="search-box">
+
+<input
+type="text"
+id="invoiceInput"
+placeholder="Masukkan Nomor Invoice">
+
+<button id="btnCari">
+
+<i class="fa-solid fa-search"></i>
+
+Cari
+
+</button>
+
+</div>
+
+</section>
+
+<!-- DATA CUSTOMER -->
+
+<section class="tracking-card" id="customerCard">
+
+<h3>
+
+<i class="fa-solid fa-user"></i>
+
+Informasi Pelanggan
+
+</h3>
+
+<p><strong>Invoice :</strong> <span id="tInvoice">-</span></p>
+
+<p><strong>Nama :</strong> <span id="tNama">-</span></p>
+
+<p><strong>Layanan :</strong> <span id="tLayanan">-</span></p>
+
+<p><strong>Alamat :</strong> <span id="tAlamat">-</span></p>
+
+<p><strong>Tanggal :</strong> <span id="tTanggal">-</span></p>
+
+</section>
+
+<!-- STATUS -->
+
+<section class="tracking-card">
+
+<h3>
+
+<i class="fa-solid fa-truck-fast"></i>
+
+Status Pesanan
+
+</h3>
+
+<div class="timeline">
+
+<div class="step active">
+
+<div class="circle">
+
+<i class="fa-solid fa-file-circle-check"></i>
+
+</div>
+
+<h4>Pesanan Diterima</h4>
+
+<p>Order berhasil dibuat.</p>
+
+</div>
+
+<div class="step" id="step2">
+
+<div class="circle">
+
+<i class="fa-solid fa-phone"></i>
+
+</div>
+
+<h4>Dikonfirmasi Admin</h4>
+
+<p>Admin menghubungi pelanggan.</p>
+
+</div>
+
+<div class="step" id="step3">
+
+<div class="circle">
+
+<i class="fa-solid fa-truck"></i>
+
+</div>
+
+<h4>Teknisi Berangkat</h4>
+
+<p>Teknisi menuju lokasi.</p>
+
+</div>
+
+<div class="step" id="step4">
+
+<div class="circle">
+
+<i class="fa-solid fa-spray-can-sparkles"></i>
+
+</div>
+
+<h4>Proses Cleaning</h4>
+
+<p>Layanan sedang dikerjakan.</p>
+
+</div>
+
+<div class="step" id="step5">
+
+<div class="circle">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+<h4>Selesai</h4>
+
+<p>Pesanan selesai.</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= ESTIMASI ================= -->
+
+<section class="tracking-card">
+
+<h3>
+
+<i class="fa-solid fa-clock"></i>
+
+Estimasi Kedatangan
+
+</h3>
+
+<div class="estimate-box">
+
+<div class="estimate-item">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<div>
+
+<h4>Tanggal Booking</h4>
+
+<p id="estimasiTanggal">-</p>
+
+</div>
+
+</div>
+
+<div class="estimate-item">
+
+<i class="fa-solid fa-business-time"></i>
+
+<div>
+
+<h4>Estimasi Kedatangan</h4>
+
+<p id="estimasiJam">-</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TEKNISI ================= -->
+
+<section class="tracking-card">
+
+<h3>
+
+<i class="fa-solid fa-user-gear"></i>
+
+Teknisi Bertugas
+
+</h3>
+
+<div class="technician">
+
+<img src="../assets/images/teknisi.png" alt="Teknisi">
+
+<div>
+
+<h4 id="techName">Menunggu Penugasan</h4>
+
+<p id="techPhone">-</p>
+
+<p id="techVehicle">-</p>
+
+</div>
+
+</div>
+
+<div class="tech-action">
+
+<a id="callTech" href="#" class="btn-primary">
+
+<i class="fa-solid fa-phone"></i>
+
+Hubungi
+
+</a>
+
+<a id="waTech" href="#" class="btn-success">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= PETA ================= -->
+
+<section class="tracking-card">
+
+<h3>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Lokasi Pelanggan
+
+</h3>
+
+<iframe
+
+id="mapsFrame"
+
+src="https://maps.google.com/maps?q=Jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed"
+
+loading="lazy"
+
+allowfullscreen>
+
+</iframe>
+
+</section>
+
+<!-- ================= RATING ================= -->
+
+<section class="tracking-card">
+
+<h3>
+
+<i class="fa-solid fa-star"></i>
+
+Beri Penilaian
+
+</h3>
+
+<div class="rating-box">
+
+<button class="star">★</button>
+
+<button class="star">★</button>
+
+<button class="star">★</button>
+
+<button class="star">★</button>
+
+<button class="star">★</button>
+
+</div>
+
+<textarea
+
+id="review"
+
+rows="4"
+
+placeholder="Bagikan pengalaman Anda menggunakan layanan Shae Cleaners...">
+
+</textarea>
+
+<button id="btnReview" class="btn-primary">
+
+Kirim Ulasan
+
+</button>
+
+</section>
+
+<!-- ================= AKSI ================= -->
+
+<section class="tracking-action">
+
+<a href="../pages/order.html" class="btn-primary">
+
+<i class="fa-solid fa-plus"></i>
+
+Booking Lagi
+
+</a>
+
+<a href="../pages/invoice.html" class="btn-secondary">
+
+<i class="fa-solid fa-file-invoice"></i>
+
+Lihat Invoice
+
+</a>
+
+<a href="https://wa.me/6281234567890" class="btn-success">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Hubungi Admin
+
+</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="tracking-footer">
+
+<img src="../assets/logo/logo.png" alt="Shae Cleaners">
+
+<h3>Shae Cleaners</h3>
+
+<p>
+
+Cleaning Service Profesional
+
+</p>
+
+<p>
+
+© <span id="year"></span> Shae Cleaners
+
+</p>
+
+</footer>
+
+<script src="../tracking.js"></script>
+
+<script src="../app.js"></script>
+
+</body>
+</html>

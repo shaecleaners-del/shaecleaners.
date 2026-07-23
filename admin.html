@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Admin Dashboard | Shae Cleaners</title>
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<img src="../assets/logo/logo.png">
+
+<h2>Shae Admin</h2>
+
+</div>
+
+<ul>
+
+<li class="active">
+
+<a href="#dashboard">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#order">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Pesanan
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#customer">
+
+<i class="fa-solid fa-users"></i>
+
+Pelanggan
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#invoice">
+
+<i class="fa-solid fa-file-invoice"></i>
+
+Invoice
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#tracking">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+Tracking
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#promo">
+
+<i class="fa-solid fa-tags"></i>
+
+Promo
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#report">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Laporan
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#setting">
+
+<i class="fa-solid fa-gear"></i>
+
+Pengaturan
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- CONTENT -->
+
+<main class="content">
+
+<header class="topbar">
+
+<h1>
+
+Dashboard Admin
+
+</h1>
+
+<div class="admin-info">
+
+<img src="../assets/images/admin.png">
+
+<span>Administrator</span>
+
+</div>
+<button onclick="logout()" class="btn-danger">
+
+Logout
+
+</button>
+</header>
+
+<!-- DASHBOARD -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<h2 id="totalOrder">
+
+0
+
+</h2>
+
+<p>Total Pesanan</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h2 id="pendapatan">
+
+Rp0
+
+</h2>
+
+<p>Pendapatan</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-user-group"></i>
+
+<h2 id="customerTotal">
+
+0
+
+</h2>
+
+<p>Pelanggan</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h2 id="progressOrder">
+
+0
+
+</h2>
+
+<p>Order Diproses</p>
+
+</div>
+
+</section>
+<a
+href="${item.paymentProof}"
+target="_blank"
+class="btn-primary">
+
+Lihat Bukti
+
+</a>
+
+<button
+class="btn-success">
+
+Verifikasi
+
+</button>
+
+<!-- ORDER TABLE -->
+
+<section class="table-card">
+
+<h2>
+
+Daftar Pesanan
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Invoice</th>
+
+<th>Nama</th>
+
+<th>Layanan</th>
+
+<th>Total</th>
+
+<th>Status</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="orderTable">
+
+<tr>
+
+<td colspan="6">
+
+Belum ada data.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+<!-- ================= DATA PELANGGAN ================= -->
+
+<section class="table-card" id="customer">
+
+<h2>
+
+<i class="fa-solid fa-users"></i>
+
+Data Pelanggan
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nama</th>
+
+<th>No. WhatsApp</th>
+
+<th>Alamat</th>
+
+<th>Total Order</th>
+
+</tr>
+
+</thead>
+
+<tbody id="customerTable">
+
+<tr>
+
+<td colspan="4">
+
+Belum ada data pelanggan.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= DAFTAR INVOICE ================= -->
+
+<section class="table-card" id="invoice">
+
+<h2>
+
+<i class="fa-solid fa-file-invoice"></i>
+
+Daftar Invoice
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Invoice</th>
+
+<th>Tanggal</th>
+
+<th>Total</th>
+
+<th>Pembayaran</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="invoiceTable">
+
+<tr>
+
+<td colspan="5">
+
+Belum ada invoice.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= UPDATE STATUS ================= -->
+
+<section class="table-card" id="tracking">
+
+<h2>
+
+<i class="fa-solid fa-truck-fast"></i>
+
+Update Status Pesanan
+
+</h2>
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label>Nomor Invoice</label>
+
+<input type="text" id="invoiceStatus" placeholder="INV-20260723-001">
+
+</div>
+
+<div class="form-group">
+
+<label>Status</label>
+
+<select id="statusOrder">
+
+<option value="Menunggu Konfirmasi">Menunggu Konfirmasi</option>
+
+<option value="Dikonfirmasi">Dikonfirmasi</option>
+
+<option value="Teknisi Berangkat">Teknisi Berangkat</option>
+
+<option value="Proses Cleaning">Proses Cleaning</option>
+
+<option value="Selesai">Selesai</option>
+
+<option value="Dibatalkan">Dibatalkan</option>
+
+</select>
+
+</div>
+
+</div>
+
+<button id="btnUpdateStatus" class="btn-primary">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Simpan Status
+
+</button>
+
+</section>
+
+<!-- ================= PROMO ================= -->
+
+<section class="table-card" id="promo">
+
+<h2>
+
+<i class="fa-solid fa-tags"></i>
+
+Kelola Promo
+
+</h2>
+
+<div class="form-grid">
+
+<input type="text" id="promoNama" placeholder="Nama Promo">
+
+<input type="text" id="promoKode" placeholder="Kode Promo">
+
+<input type="number" id="promoDiskon" placeholder="Diskon (%)">
+
+</div>
+
+<button id="btnPromo" class="btn-success">
+
+<i class="fa-solid fa-plus"></i>
+
+Tambah Promo
+
+</button>
+
+</section>
+
+<!-- ================= LAPORAN ================= -->
+
+<section class="table-card" id="report">
+
+<h2>
+
+<i class="fa-solid fa-chart-column"></i>
+
+Laporan Pendapatan
+
+</h2>
+
+<div class="report-grid">
+
+<div class="report-card">
+
+<h4>Hari Ini</h4>
+
+<h2 id="todayIncome">Rp0</h2>
+
+</div>
+
+<div class="report-card">
+
+<h4>Bulan Ini</h4>
+
+<h2 id="monthIncome">Rp0</h2>
+
+</div>
+
+<div class="report-card">
+
+<h4>Total Pendapatan</h4>
+
+<h2 id="allIncome">Rp0</h2>
+
+</div>
+
+</div>
+
+<canvas id="incomeChart"></canvas>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="admin-footer">
+
+<p>
+
+© <span id="year"></span> Shae Cleaners Admin Dashboard
+
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="../admin.js"></script>
+
+<script src="../app.js"></script>
+</main>
+
+</body>
+
+</html>

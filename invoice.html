@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Invoice | Shae Cleaners</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<link rel="stylesheet" href="../invoice.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="invoice-header">
+
+<div class="company">
+
+<img src="../assets/logo/logo.png" alt="Shae Cleaners">
+
+<div>
+
+<h2>Shae Cleaners</h2>
+
+<p>Cleaning Service Professional</p>
+
+</div>
+
+</div>
+
+<div class="status paid">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<span>MENUNGGU PEMBAYARAN</span>
+
+</div>
+
+</header>
+
+<!-- INVOICE -->
+
+<section class="invoice-card">
+
+<div class="invoice-top">
+
+<div>
+
+<h3>INVOICE</h3>
+
+<p id="invoiceNo">
+
+INV-20260723-001
+
+</p>
+
+</div>
+
+<div>
+
+<p>Tanggal</p>
+
+<strong id="invoiceDate">
+
+23 Juli 2026
+
+</strong>
+
+</div>
+
+</div>
+
+<hr>
+
+<!-- DATA PELANGGAN -->
+
+<div class="customer">
+
+<h4>Data Pelanggan</h4>
+
+<p>
+
+<strong>Nama :</strong>
+
+<span id="cNama"></span>
+
+</p>
+
+<p>
+
+<strong>WhatsApp :</strong>
+
+<span id="cWa"></span>
+
+</p>
+
+<p>
+
+<strong>Alamat :</strong>
+
+<span id="cAlamat"></span>
+
+</p>
+
+</div>
+
+<hr>
+
+<!-- TABEL -->
+
+<table class="invoice-table">
+
+<thead>
+
+<tr>
+
+<th>Layanan</th>
+
+<th>Qty</th>
+
+<th>Harga</th>
+
+<th>Subtotal</th>
+
+</tr>
+
+</thead>
+
+<tbody id="invoiceBody">
+
+<tr>
+
+<td>Cuci Sofa</td>
+
+<td>1</td>
+
+<td>Rp60.000</td>
+
+<td>Rp60.000</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<!-- TOTAL -->
+
+<div class="total-box">
+
+<div>
+
+<span>Subtotal</span>
+
+<strong id="subTotal">
+
+Rp60.000
+
+</strong>
+
+</div>
+
+<div>
+
+<span>Diskon</span>
+
+<strong id="diskon">
+
+Rp0
+
+</strong>
+
+</div>
+
+<div>
+
+<span>Total Bayar</span>
+
+<h2 id="grandTotal">
+
+Rp60.000
+
+</h2>
+
+</div>
+</div>
+</section>
+<button id="btnBayar" class="btn-success">
+
+Bayar Sekarang
+
+</button>
+<!-- ================= METODE PEMBAYARAN ================= -->
+
+<section class="invoice-card">
+
+<h3>
+<i class="fa-solid fa-wallet"></i>
+Metode Pembayaran
+</h3>
+
+<div class="payment-method">
+
+<div class="payment-item">
+
+<img src="../assets/payment/qris.png" alt="QRIS">
+
+<div>
+
+<h4>QRIS</h4>
+
+<p>Scan QR Code untuk pembayaran.</p>
+
+</div>
+
+</div>
+
+<div class="payment-item">
+
+<img src="../assets/payment/bca.png" alt="BCA">
+
+<div>
+
+<h4>Transfer BCA</h4>
+
+<p>No. Rekening</p>
+
+<strong id="rekeningBCA">
+8670492061
+</strong>
+
+<p>a.n. Hadi</p>
+
+<button class="copyRek"
+data-rekening="8670492061">
+
+Salin Rekening
+
+</button>
+
+</div>
+
+</div>
+
+<div class="payment-item">
+
+<img src="../assets/payment/dana.png" alt="DANA">
+
+<div>
+
+<h4>DANA</h4>
+
+<p>No. DANA</p>
+
+<strong id="rekeningDana">
+08xxxxxxxxxx
+</strong>
+
+<button class="copyRek"
+data-rekening="08xxxxxxxxxx">
+
+Salin Nomor
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+</section>
+<!-- Upload Bukti Pembayaran -->
+
+<section class="invoice-card">
+
+<h3>
+
+<i class="fa-solid fa-upload"></i>
+
+Upload Bukti Pembayaran
+
+</h3>
+
+<input
+type="file"
+id="paymentProof"
+accept="image/*">
+
+<img
+id="paymentPreview"
+style="display:none;width:100%;margin-top:20px;border-radius:15px;max-height:400px;object-fit:cover;">
+
+<button
+id="btnUploadPayment"
+class="btn-primary">
+
+Upload Bukti Pembayaran
+
+</button>
+
+<p id="uploadInfo"></p>
+
+</section>
+<!-- ================= CATATAN ================= -->
+
+<section class="invoice-card">
+
+<h3>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Informasi
+
+</h3>
+
+<ul class="invoice-note">
+
+<li>Pembayaran dilakukan maksimal 1×24 jam.</li>
+
+<li>Teknisi datang sesuai jadwal yang telah dipilih.</li>
+
+<li>Invoice ini merupakan bukti pemesanan resmi.</li>
+
+<li>Simpan invoice untuk keperluan garansi layanan.</li>
+
+</ul>
+
+</section>
+
+<!-- ================= AKSI ================= -->
+
+<section class="invoice-action">
+
+<button id="btnWhatsapp" class="btn-success">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Kirim Invoice
+
+</button>
+
+<button id="btnPrint" class="btn-primary">
+
+<i class="fa-solid fa-print"></i>
+
+Cetak
+
+</button>
+
+<button id="btnDownload" class="btn-secondary">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+Download PDF
+
+</button>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="invoice-footer">
+
+<img src="../assets/logo/logo.png">
+
+<h3>Shae Cleaners</h3>
+
+<p>
+
+Jasa Cuci Sofa • Kasur • AC • Jok Mobil • Home Cleaning
+
+</p>
+
+<p>
+
+Terima kasih telah menggunakan layanan kami.
+
+</p>
+
+<p>
+
+© <span id="year"></span> Shae Cleaners
+
+</p>
+
+</footer>
+
+<script src="../invoice.js"></script>
+
+<script src="../app.js"></script>
+<script src="https://app.sandbox.midtrans.com/snap/snap.js"
+data-client-key="YOUR_CLIENT_KEY">
+</script>
+<script type="module" src="payment.js"></script>
+</body>
+
+</html>
